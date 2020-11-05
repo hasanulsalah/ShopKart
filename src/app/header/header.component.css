@@ -1,0 +1,21 @@
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+ .navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+  }
+  .icon-style{
+    color: #000;
+    padding:12px;
+    margin-left: 4px;
+}
+.head-style{
+    color: #000;
+    padding:10px;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-right: 45px;
+}

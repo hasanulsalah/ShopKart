@@ -1,0 +1,221 @@
+<div class="container-fluid bg-dark">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbars" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <a class="navbar-brand mx-5" href="#"><img src="../assets/shopkart.jpg" height="30" alt="shopkart">
+          ShopKart</a>
+
+           <div class="input-group md-form form-sm form-2 pl-0 w-100 mx-2">
+            <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search for products,brands and more" aria-label="Search">
+            <div class="input-group-append">
+              <span class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+                  aria-hidden="true"></i></span>
+            </div>
+          </div>
+       
+        <div class="collapse navbars navbar-collapse" id="navbar2" >
+         
+         
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mx-5">
+              <button type="button" class="btn btn-light" data-toggle="modal" data-target="#elegantModalForm" ><i class="fas fa-sign-in-alt mr-1"></i>Login</button>
+              <!-- Modal -->
+    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <!--Content-->
+      <div class="modal-content form-elegant">
+        <!--Header-->
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body mx-4">
+          <!--Body-->
+          <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+            <label for ="email">
+              Your email:
+              <input type="email" class="form-control"  formControlName="email" id="email">
+            </label>
+            </div>
+        
+           <div class="form-group">
+            <label>
+              password:
+              <input type="password" class="form-control" formControlName="password" id="password">
+            </label>
+           </div>
+        
+          <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">SignIN</button>
+        
+          </form>
+
+          <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+            with:</p>
+    
+          <div class="row my-3 d-flex justify-content-center" style="    background-color: antiquewhite;">
+            <!--Facebook-->
+            <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a "><i class="fab fa-facebook-f text-center"></i></button>
+            <!--Twitter-->
+            <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+            <!--Google +-->
+            <button type="button" class="btn btn-white btn-rounded z-depth-1a "><i class="fab fa-google-plus-g"></i></button>
+          </div>
+
+        </div>
+        <!--Footer-->
+        <div class="modal-footer mx-5 pt-3 mb-1">
+          <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+              Sign Up</a></p>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+    </div>
+    <!-- Modal -->
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="fa fa-bell mr-4 " aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link waves-effect waves-light" >
+                <i class="fa fa-shopping-cart" aria-hidden="true">Cart</i>
+              </a>
+              
+            </li>
+    
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </div>
+    
+    <div class="container-fluid bg-light">
+      <nav class="navbar navbar-expand-sm bg-light navbar-light" role="navigation">
+    
+        <div class="navbar-collapse collapse navbars" id="navbar1" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Electronics</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Mobiles</a>
+                <a class="dropdown-item" href="#">Mobile accessories</a>
+                <a class="dropdown-item" href="#">Laptops</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>TVs and Appliances</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Smart & Ultra HD </a>
+                <a class="dropdown-item" href="#">Refrigerators</a>
+                <a class="dropdown-item" href="#">Washing Machine</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Men</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b> Women</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Baby & Kids</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Home & Furniture</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b> Sports</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b> Books&More</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b> Offer Zone</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+         </ul>
+        </div>
+        </nav>
+      </div>
+
+      <div class="container-fluid "style="background-color: #f8f9fa;">
+        <div class="container"  >
+            <div class="row  text-white d-none d-xl-flex " style="background-color: rgba(248, 247, 247, 0.705);">
+                <i class="fas fa-truck fa-2x icon-style"></i>
+                <h4 class="head-style">Free Delivery On All <br>Orders</h4>
+                <i class="fas fa-mobile fa-2x icon-style"></i>
+                <h4 class="head-style">24/7 availability, also <br>via the mobile app</h4>
+                <i class="fas fa-shipping-fast fa-2x icon-style"></i>
+                <h4 class="head-style">Shipping Guarantee: <br>Get your peace of mind.</h4>
+                <i class="fas fa-globe fa-2x icon-style"></i>
+                <h4 class="head-style">Popular brands from <br>all over the world.</h4>
+            </div>
+        </div>
+    </div>
+    <app-shopkart-styles></app-shopkart-styles>
+    
